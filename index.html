@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignalSRE — Reliability stories, playbooks, and tools</title>
+    <meta
+      name="description"
+      content="An SRE-focused site for reliability engineering, incident response, observability, and platform operations."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="SignalSRE home">
+          <span class="brand-mark">S</span>
+          <span class="brand-text">
+            <strong>SignalSRE</strong>
+            <small>Reliability, Observability, Recovery</small>
+          </span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+
+        <nav class="primary-nav" id="primary-nav">
+          <a href="#insights">Insights</a>
+          <a href="#toolkit">Toolkit</a>
+          <a href="#playbooks">Playbooks</a>
+          <a href="#about">About</a>
+          <a class="nav-cta" href="#subscribe">Subscribe</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">SRE field notes</p>
+            <h1>Make reliability visible, actionable, and repeatable.</h1>
+            <p class="lead">
+              Practical SRE essays, incident reviews, and runbooks for teams running modern
+              platforms at scale.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#insights">Explore insights</a>
+              <a class="button button-secondary" href="#playbooks">View playbooks</a>
+            </div>
+
+            <ul class="hero-metrics" aria-label="Site highlights">
+              <li>
+                <strong>24</strong>
+                <span>runbooks and templates</span>
+              </li>
+              <li>
+                <strong>18%</strong>
+                <span>faster incident triage</span>
+              </li>
+              <li>
+                <strong>7</strong>
+                <span>tool categories covered</span>
+              </li>
+            </ul>
+          </div>
+
+          <aside class="hero-panel" aria-label="Featured story">
+            <p class="panel-label">Featured story</p>
+            <div class="story-card story-card-large">
+              <div class="story-visual story-visual-gradient"></div>
+              <div class="story-content">
+                <div class="meta-row">
+                  <span class="pill">Observability</span>
+                  <span>12 min read</span>
+                </div>
+                <h2>Tracing the gap between “green” dashboards and real user pain</h2>
+                <p>
+                  How to connect service indicators, traces, and SLOs so the page tells the truth
+                  before the pager does.
+                </p>
+                <a href="#insights">Read the feature</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="insights">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Latest insights</p>
+              <h2>New posts for reliability-minded teams</h2>
+            </div>
+            <div class="filter-bar" role="tablist" aria-label="Post filters">
+              <button class="filter is-active" type="button" data-filter="all">All</button>
+              <button class="filter" type="button" data-filter="observability">Observability</button>
+              <button class="filter" type="button" data-filter="incident-response">
+                Incident response
+              </button>
+              <button class="filter" type="button" data-filter="kubernetes">Kubernetes</button>
+              <button class="filter" type="button" data-filter="automation">Automation</button>
+            </div>
+          </div>
+
+          <div class="posts-grid">
+            <article class="post-card" data-categories="observability">
+              <div class="post-thumb thumb-a"></div>
+              <div class="post-body">
+                <div class="meta-row">
+                  <span class="pill">Observability</span>
+                  <span>Jan 12, 2026</span>
+                </div>
+                <h3>Designing dashboards that survive an outage</h3>
+                <p>
+                  A practical pattern for separating signal from noise when everyone is opening the
+                  same graph under pressure.
+                </p>
+              </div>
+            </article>
+
+            <article class="post-card" data-categories="incident-response automation">
+              <div class="post-thumb thumb-b"></div>
+              <div class="post-body">
+                <div class="meta-row">
+                  <span class="pill">Incident response</span>
+                  <span>Dec 28, 2025</span>
+                </div>
+                <h3>From alert to action: automating the first five minutes</h3>
+                <p>
+                  Reduce manual handoffs with enriched alerts, context links, and safe triage
+                  automation.
+                </p>
+              </div>
+            </article>
+
+            <article class="post-card" data-categories="kubernetes observability">
+              <div class="post-thumb thumb-c"></div>
+              <div class="post-body">
+                <div class="meta-row">
+                  <span class="pill">Kubernetes</span>
+                  <span>Dec 10, 2025</span>
+                </div>
+                <h3>Guardrails for noisy clusters without blocking delivery</h3>
+                <p>
+                  Apply policy, quotas, and progressive delivery to keep cluster behavior
+                  predictable as teams scale.
+                </p>
+              </div>
+            </article>
+
+            <article class="post-card" data-categories="automation">
+              <div class="post-thumb thumb-d"></div>
+              <div class="post-body">
+                <div class="meta-row">
+                  <span class="pill">Automation</span>
+                  <span>Nov 22, 2025</span>
+                </div>
+                <h3>Writing runbooks that can actually be executed at 3 a.m.</h3>
+                <p>
+                  Keep the steps short, deterministic, and linked to the tools engineers already
+                  use under stress.
+                </p>
+              </div>
+            </article>
+
+            <article class="post-card" data-categories="observability incident-response">
+              <div class="post-thumb thumb-e"></div>
+              <div class="post-body">
+                <div class="meta-row">
+                  <span class="pill">SLOs</span>
+                  <span>Nov 02, 2025</span>
+                </div>
+                <h3>Choosing the right SLI when every metric looks important</h3>
+                <p>
+                  Start from user journeys, then build the smallest possible set of signals that
+                  can explain a breach.
+                </p>
+              </div>
+            </article>
+
+            <article class="post-card" data-categories="kubernetes automation">
+              <div class="post-thumb thumb-f"></div>
+              <div class="post-body">
+                <div class="meta-row">
+                  <span class="pill">Delivery</span>
+                  <span>Oct 19, 2025</span>
+                </div>
+                <h3>Safer deployments with progressive rollout checks</h3>
+                <p>
+                  Use health gates, canaries, and rollback criteria to make change risk visible
+                  before users feel it.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="toolkit">
+        <div class="container">
+          <div class="section-heading compact">
+            <div>
+              <p class="eyebrow">Toolkit</p>
+              <h2>Common SRE building blocks</h2>
+            </div>
+            <p class="section-copy">
+              A focused stack for telemetry, delivery, and reliability automation.
+            </p>
+          </div>
+
+          <div class="tool-grid">
+            <div class="tool-card">
+              <h3>Prometheus</h3>
+              <p>Metrics scraping, alert rules, and SLO-friendly signal collection.</p>
+            </div>
+            <div class="tool-card">
+              <h3>Grafana</h3>
+              <p>Readable dashboards, alert views, and operational storytelling.</p>
+            </div>
+            <div class="tool-card">
+              <h3>OpenTelemetry</h3>
+              <p>Distributed traces and portable instrumentation across services.</p>
+            </div>
+            <div class="tool-card">
+              <h3>Terraform</h3>
+              <p>Reusable infrastructure code for environments, policies, and guardrails.</p>
+            </div>
+            <div class="tool-card">
+              <h3>Argo CD</h3>
+              <p>Git-driven delivery with safer rollout control and drift visibility.</p>
+            </div>
+            <div class="tool-card">
+              <h3>Loki</h3>
+              <p>Searchable logs that pair well with traces and service metrics.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="playbooks">
+        <div class="container">
+          <div class="section-heading compact">
+            <div>
+              <p class="eyebrow">Playbooks</p>
+              <h2>Reliability loops that teams can repeat</h2>
+            </div>
+          </div>
+
+          <div class="playbook-grid">
+            <div class="playbook">
+              <span>01</span>
+              <h3>Measure the right thing</h3>
+              <p>Define user-focused SLIs before adding more dashboards or alerts.</p>
+            </div>
+            <div class="playbook">
+              <span>02</span>
+              <h3>Alert with context</h3>
+              <p>Route alerts with the next best action, owner, and linked investigation steps.</p>
+            </div>
+            <div class="playbook">
+              <span>03</span>
+              <h3>Run incidents consistently</h3>
+              <p>Keep roles, timelines, and comms predictable while the system is unstable.</p>
+            </div>
+            <div class="playbook">
+              <span>04</span>
+              <h3>Learn and harden</h3>
+              <p>Turn each incident into concrete fixes, not just notes in a retrospective doc.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-cta" id="subscribe">
+        <div class="container cta-card">
+          <div>
+            <p class="eyebrow">Newsletter</p>
+            <h2>Get reliability essays and runbook patterns in your inbox.</h2>
+            <p>
+              Short, practical notes on observability, incident response, and operational
+              guardrails.
+            </p>
+          </div>
+
+          <form class="subscribe-form">
+            <label class="sr-only" for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="you@company.com" required />
+            <button class="button button-primary" type="submit">Subscribe</button>
+            <p class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="about">
+        <div class="container about-grid">
+          <div>
+            <p class="eyebrow">About</p>
+            <h2>Built for SREs, platform engineers, and on-call teams.</h2>
+          </div>
+          <p class="section-copy">
+            SignalSRE is a clean, opinionated home for reliability content. It is designed to
+            feel editorial like the reference site, but the voice, topics, and tools are centered
+            on SRE practice rather than generic DevOps.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>SignalSRE</span>
+        <span>Reliability engineering for modern teams</span>
+        <span id="year"></span>
+      </div>
+    </footer>
+  </body>
+</html>
