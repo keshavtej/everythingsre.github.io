@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="SLO illustration">
+  <rect width="800" height="450" rx="36" fill="#ffffff" />
+  <rect x="96" y="88" width="608" height="274" rx="28" fill="#f7fbff" stroke="rgba(36,83,143,.12)" />
+  <circle cx="260" cy="224" r="74" fill="#1e66b2" opacity=".12" />
+  <circle cx="260" cy="224" r="48" fill="#2fc4d4" opacity=".78" />
+  <circle cx="260" cy="224" r="18" fill="#ffffff" />
+  <path d="M260 162v28M260 258v28M198 224h28M294 224h28" stroke="#f57a26" stroke-width="7" stroke-linecap="round" />
+  <rect x="396" y="150" width="194" height="20" rx="10" fill="#dbe7f4" />
+  <rect x="396" y="184" width="164" height="12" rx="6" fill="#dbe7f4" />
+  <rect x="396" y="210" width="184" height="12" rx="6" fill="#dbe7f4" />
+  <rect x="396" y="236" width="144" height="12" rx="6" fill="#dbe7f4" />
+  <path d="M396 292c44-34 82-49 118-49 38 0 68 14 110 42" fill="none" stroke="#1e66b2" stroke-width="8" stroke-linecap="round" />
+  <path d="M396 292c44-34 82-49 118-49 38 0 68 14 110 42" fill="none" stroke="#f57a26" stroke-width="3" stroke-linecap="round" opacity=".75" />
+</svg>

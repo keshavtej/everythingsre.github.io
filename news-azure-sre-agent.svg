@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Azure SRE Agent illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#ffffff" />
+        <stop offset="1" stop-color="#e9f0f8" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#63d8ff" />
+      <stop offset="1" stop-color="#27d7a1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="36" fill="url(#bg)" />
+  <circle cx="600" cy="120" r="90" fill="#2fc4d4" opacity=".1" />
+  <circle cx="690" cy="280" r="110" fill="#f57a26" opacity=".08" />
+  <rect x="120" y="96" width="320" height="220" rx="24" fill="#ffffff" stroke="rgba(36,83,143,.12)" />
+  <rect x="145" y="122" width="270" height="150" rx="16" fill="#eef4fb" stroke="rgba(30,102,178,.14)" />
+  <rect x="160" y="138" width="120" height="14" rx="7" fill="#1e66b2" opacity=".92" />
+  <rect x="160" y="168" width="188" height="14" rx="7" fill="#2fc4d4" opacity=".82" />
+  <rect x="160" y="198" width="150" height="14" rx="7" fill="#f57a26" opacity=".86" />
+  <rect x="160" y="228" width="208" height="14" rx="7" fill="#1e66b2" opacity=".72" />
+  <rect x="490" y="132" width="180" height="166" rx="30" fill="#ffffff" stroke="rgba(36,83,143,.12)" />
+  <circle cx="580" cy="190" r="38" fill="url(#accent)" opacity=".9" />
+  <circle cx="580" cy="190" r="17" fill="#ffffff" />
+  <path d="M580 125v-28M580 283v28M515 190h-28M673 190h28M535 145l-20-20M625 235l20 20M625 145l20-20M535 235l-20 20" stroke="#1e66b2" stroke-linecap="round" stroke-width="8" />
+  <path d="M70 360h660" stroke="rgba(36,83,143,.12)" stroke-width="2" />
+  <path d="M150 350c80-64 142-62 210-12s126 56 198 12 132-50 230-10" fill="none" stroke="#1e66b2" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M150 350c80-64 142-62 210-12s126 56 198 12 132-50 230-10" fill="none" stroke="#f57a26" stroke-width="2" opacity=".65" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

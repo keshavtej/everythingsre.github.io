@@ -30,7 +30,7 @@ filterButtons.forEach((button) => {
 subscribeForm?.addEventListener('submit', (event) => {
   event.preventDefault();
   const email = new FormData(subscribeForm).get('email');
-  formStatus.textContent = `Thanks — ${email} is on the list.`;
+  formStatus.textContent = `Thanks — ${email} is subscribed for the latest news updates.`;
   subscribeForm.reset();
 });
 

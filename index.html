@@ -8,6 +8,7 @@
       name="description"
       content="An SRE-focused site for reliability engineering, incident response, observability, and platform operations."
     />
+    <link rel="icon" href="logo.png" type="image/png" />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
   </head>
@@ -18,11 +19,7 @@
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="#home" aria-label="everythingsre home">
-          <span class="brand-mark">S</span>
-          <span class="brand-text">
-            <strong>everythingsre</strong>
-            <small>Reliability, Observability, Recovery</small>
-          </span>
+          <img class="brand-mark" src="logo.png" alt="" aria-hidden="true" />
         </a>
 
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
@@ -34,6 +31,7 @@
 
         <nav class="primary-nav" id="primary-nav">
           <a href="#insights">Insights</a>
+          <a href="#news">News</a>
           <a href="#toolkit">Toolkit</a>
           <a href="#playbooks">Playbooks</a>
           <a href="#about">About</a>
@@ -55,7 +53,7 @@
 
             <div class="hero-actions">
               <a class="button button-primary" href="#insights">Explore insights</a>
-              <a class="button button-secondary" href="#playbooks">View playbooks</a>
+              <a class="button button-secondary" href="#news">Latest news</a>
             </div>
 
             <ul class="hero-metrics" aria-label="Site highlights">
@@ -77,7 +75,7 @@
           <aside class="hero-panel" aria-label="Featured story">
             <p class="panel-label">Featured story</p>
             <div class="story-card story-card-large">
-              <div class="story-visual story-visual-gradient"></div>
+              <img class="story-visual story-thumb-image" src="feature-observability.svg" alt="" />
               <div class="story-content">
                 <div class="meta-row">
                   <span class="pill">Observability</span>
@@ -92,6 +90,80 @@
               </div>
             </div>
           </aside>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="news">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Latest news</p>
+              <h2>What’s changing in SRE right now</h2>
+            </div>
+            <p class="section-copy">
+              Recent releases and research shaping how teams run, observe, and automate reliability.
+            </p>
+          </div>
+
+          <div class="news-grid">
+            <article class="post-card news-card">
+              <img class="post-thumb post-thumb-image" src="news-azure-sre-agent.svg" alt="" />
+              <div class="post-body">
+                <div class="meta-row">
+                  <span class="pill">AI operations</span>
+                  <span>Mar 10, 2026</span>
+                </div>
+                <h3>Azure SRE Agent reaches general availability</h3>
+                <p>
+                  Microsoft moved Azure SRE Agent into GA, framing it as an AI teammate for triage,
+                  remediation, and incident workflows.
+                </p>
+                <a href="https://learn.microsoft.com/en-us/azure/sre-agent/" target="_blank" rel="noreferrer">
+                  Read the announcement
+                </a>
+              </div>
+            </article>
+
+            <article class="post-card news-card">
+              <img class="post-thumb post-thumb-image" src="news-grafana-13.svg" alt="" />
+              <div class="post-body">
+                <div class="meta-row">
+                  <span class="pill">Observability</span>
+                  <span>Apr 21, 2026</span>
+                </div>
+                <h3>Grafana 13 adds easier open observability at scale</h3>
+                <p>
+                  Grafana Labs shipped Grafana 13 with better OpenTelemetry paths, dynamic
+                  dashboards, and a redesigned Loki architecture.
+                </p>
+                <a
+                  href="https://grafana.com/blog/grafana-13-release-all-the-latest-features/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  See what changed
+                </a>
+              </div>
+            </article>
+
+            <article class="post-card news-card">
+              <img class="post-thumb post-thumb-image" src="news-sre-report.svg" alt="" />
+              <div class="post-body">
+                <div class="meta-row">
+                  <span class="pill">Reliability research</span>
+                  <span>2026 report</span>
+                </div>
+                <h3>AI is cutting toil, but reliability gaps remain</h3>
+                <p>
+                  LogicMonitor’s SRE Report 2026 says AI is reducing repetitive work, while many
+                  teams still struggle to connect reliability work to business outcomes.
+                </p>
+                <a href="https://www.logicmonitor.com/resources/sre-report-2026" target="_blank" rel="noreferrer">
+                  Read the report
+                </a>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -115,7 +187,7 @@
 
           <div class="posts-grid">
             <article class="post-card" data-categories="observability">
-              <div class="post-thumb thumb-a"></div>
+              <img class="post-thumb post-thumb-image" src="insight-dashboard.svg" alt="" />
               <div class="post-body">
                 <div class="meta-row">
                   <span class="pill">Observability</span>
@@ -130,7 +202,7 @@
             </article>
 
             <article class="post-card" data-categories="incident-response automation">
-              <div class="post-thumb thumb-b"></div>
+              <img class="post-thumb post-thumb-image" src="insight-alerts.svg" alt="" />
               <div class="post-body">
                 <div class="meta-row">
                   <span class="pill">Incident response</span>
@@ -145,7 +217,7 @@
             </article>
 
             <article class="post-card" data-categories="kubernetes observability">
-              <div class="post-thumb thumb-c"></div>
+              <img class="post-thumb post-thumb-image" src="insight-kubernetes.svg" alt="" />
               <div class="post-body">
                 <div class="meta-row">
                   <span class="pill">Kubernetes</span>
@@ -160,7 +232,7 @@
             </article>
 
             <article class="post-card" data-categories="automation">
-              <div class="post-thumb thumb-d"></div>
+              <img class="post-thumb post-thumb-image" src="insight-runbooks.svg" alt="" />
               <div class="post-body">
                 <div class="meta-row">
                   <span class="pill">Automation</span>
@@ -175,7 +247,7 @@
             </article>
 
             <article class="post-card" data-categories="observability incident-response">
-              <div class="post-thumb thumb-e"></div>
+              <img class="post-thumb post-thumb-image" src="insight-slo.svg" alt="" />
               <div class="post-body">
                 <div class="meta-row">
                   <span class="pill">SLOs</span>
@@ -190,7 +262,7 @@
             </article>
 
             <article class="post-card" data-categories="kubernetes automation">
-              <div class="post-thumb thumb-f"></div>
+              <img class="post-thumb post-thumb-image" src="insight-rollout.svg" alt="" />
               <div class="post-body">
                 <div class="meta-row">
                   <span class="pill">Delivery</span>
@@ -286,11 +358,8 @@
         <div class="container cta-card">
           <div>
             <p class="eyebrow">Newsletter</p>
-            <h2>Get reliability essays and runbook patterns in your inbox.</h2>
-            <p>
-              Short, practical notes on observability, incident response, and operational
-              guardrails.
-            </p>
+            <h2>Get the latest SRE news by email.</h2>
+            <p>Sign up to receive new reliability updates as they’re published.</p>
           </div>
 
           <form class="subscribe-form">

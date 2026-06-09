@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Kubernetes illustration">
+  <rect width="800" height="450" rx="36" fill="#ffffff" />
+  <circle cx="176" cy="112" r="88" fill="#2fc4d4" opacity=".12" />
+  <rect x="118" y="88" width="564" height="274" rx="28" fill="#f7fbff" stroke="rgba(36,83,143,.12)" />
+  <g transform="translate(400 226)">
+    <circle r="78" fill="#1e66b2" opacity=".14" />
+    <circle r="48" fill="#2fc4d4" opacity=".76" />
+    <circle r="18" fill="#ffffff" />
+    <path d="M0-58V58M-50-29H50M-36-44L36 44M36-44-36 44" stroke="#ffffff" stroke-width="7" stroke-linecap="round" />
+  </g>
+  <rect x="156" y="260" width="110" height="18" rx="9" fill="#dbe7f4" />
+  <rect x="156" y="290" width="154" height="12" rx="6" fill="#dbe7f4" />
+  <rect x="520" y="260" width="110" height="18" rx="9" fill="#dbe7f4" />
+  <rect x="496" y="290" width="154" height="12" rx="6" fill="#dbe7f4" />
+</svg>

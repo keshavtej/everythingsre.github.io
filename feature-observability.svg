@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Observability featured illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" />
+      <stop offset="1" stop-color="#ecf3fa" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="36" fill="url(#bg)" />
+  <circle cx="170" cy="110" r="88" fill="#2fc4d4" opacity=".12" />
+  <circle cx="642" cy="108" r="120" fill="#f57a26" opacity=".08" />
+  <rect x="102" y="104" width="300" height="220" rx="26" fill="#ffffff" stroke="rgba(36,83,143,.12)" />
+  <rect x="128" y="130" width="140" height="14" rx="7" fill="#1e66b2" />
+  <rect x="128" y="162" width="220" height="12" rx="6" fill="#dbe7f4" />
+  <rect x="128" y="188" width="188" height="12" rx="6" fill="#dbe7f4" />
+  <rect x="128" y="214" width="240" height="12" rx="6" fill="#dbe7f4" />
+  <path d="M132 270c32-42 61-61 98-61s67 17 102 50 63 41 97 22" fill="none" stroke="#1e66b2" stroke-width="8" stroke-linecap="round" />
+  <path d="M132 270c32-42 61-61 98-61s67 17 102 50 63 41 97 22" fill="none" stroke="#2fc4d4" stroke-width="3" stroke-linecap="round" opacity=".8" />
+  <rect x="472" y="124" width="188" height="188" rx="28" fill="#ffffff" stroke="rgba(36,83,143,.12)" />
+  <circle cx="566" cy="218" r="46" fill="#1e66b2" opacity=".16" />
+  <circle cx="566" cy="218" r="28" fill="#2fc4d4" opacity=".82" />
+  <circle cx="566" cy="218" r="12" fill="#ffffff" />
+  <path d="M566 148v24M566 264v24M500 218h24M608 218h24M523 175l-16-16M609 261l16 16M609 175l16-16M523 261l-16 16" stroke="#f57a26" stroke-width="7" stroke-linecap="round" />
+</svg>
