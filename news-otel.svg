@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="OpenTelemetry illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" />
+      <stop offset="1" stop-color="#eef6fb" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="36" fill="url(#bg)" />
+  <circle cx="168" cy="120" r="88" fill="#2fc4d4" opacity=".14" />
+  <circle cx="620" cy="106" r="118" fill="#1e66b2" opacity=".08" />
+  <rect x="110" y="112" width="250" height="210" rx="26" fill="#ffffff" stroke="rgba(36,83,143,.12)" />
+  <rect x="138" y="136" width="122" height="14" rx="7" fill="#1e66b2" />
+  <rect x="138" y="170" width="184" height="12" rx="6" fill="#dbe7f4" />
+  <rect x="138" y="196" width="150" height="12" rx="6" fill="#dbe7f4" />
+  <rect x="138" y="222" width="206" height="12" rx="6" fill="#dbe7f4" />
+  <path d="M154 278c30-30 60-48 90-48s59 15 88 44 63 46 100 18" fill="none" stroke="#1e66b2" stroke-width="8" stroke-linecap="round" />
+  <path d="M154 278c30-30 60-48 90-48s59 15 88 44 63 46 100 18" fill="none" stroke="#2fc4d4" stroke-width="3" stroke-linecap="round" opacity=".85" />
+  <rect x="448" y="120" width="194" height="194" rx="30" fill="#ffffff" stroke="rgba(36,83,143,.12)" />
+  <circle cx="545" cy="217" r="56" fill="#1e66b2" opacity=".14" />
+  <circle cx="545" cy="217" r="32" fill="#2fc4d4" opacity=".88" />
+  <circle cx="545" cy="217" r="12" fill="#ffffff" />
+  <path d="M545 148v22M545 264v22M478 217h22M590 217h22M496 168l-16-16M594 266l16 16M594 168l16-16M496 266l-16 16" stroke="#f57a26" stroke-width="7" stroke-linecap="round" />
+</svg>

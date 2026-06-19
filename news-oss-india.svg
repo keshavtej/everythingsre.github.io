@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Open Source Summit India illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" />
+      <stop offset="1" stop-color="#f0f5fb" />
+    </linearGradient>
+    <linearGradient id="flag" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f57a26" />
+      <stop offset=".5" stop-color="#ffffff" />
+      <stop offset="1" stop-color="#2fc4d4" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="36" fill="url(#bg)" />
+  <circle cx="184" cy="112" r="100" fill="#f57a26" opacity=".08" />
+  <circle cx="630" cy="112" r="104" fill="#2fc4d4" opacity=".10" />
+  <rect x="92" y="104" width="284" height="226" rx="28" fill="#ffffff" stroke="rgba(36,83,143,.12)" />
+  <rect x="120" y="132" width="128" height="14" rx="7" fill="#1e66b2" />
+  <rect x="120" y="166" width="204" height="12" rx="6" fill="#dbe7f4" />
+  <rect x="120" y="192" width="170" height="12" rx="6" fill="#dbe7f4" />
+  <rect x="120" y="218" width="220" height="12" rx="6" fill="#dbe7f4" />
+  <rect x="120" y="250" width="220" height="38" rx="19" fill="url(#flag)" opacity=".9" />
+  <circle cx="558" cy="224" r="96" fill="#ffffff" stroke="rgba(36,83,143,.12)" />
+  <path d="M558 156c24 0 44 20 44 44 0 34-44 76-44 76s-44-42-44-76c0-24 20-44 44-44z" fill="#1e66b2" opacity=".16" />
+  <path d="M558 182c13 0 24 11 24 24s-11 24-24 24-24-11-24-24 11-24 24-24z" fill="#f57a26" />
+  <path d="M474 296h168" stroke="#2fc4d4" stroke-width="8" stroke-linecap="round" />
+  <path d="M500 130h116" stroke="#1e66b2" stroke-width="8" stroke-linecap="round" opacity=".55" />
+</svg>

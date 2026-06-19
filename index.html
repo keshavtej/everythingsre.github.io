@@ -32,6 +32,7 @@
         <nav class="primary-nav" id="primary-nav">
           <a href="#insights">Insights</a>
           <a href="#news">News</a>
+          <a href="#archive">Archive</a>
           <a href="#toolkit">Toolkit</a>
           <a href="#playbooks">Playbooks</a>
           <a href="#about">About</a>
@@ -47,8 +48,8 @@
             <p class="eyebrow">SRE field notes</p>
             <h1>Make reliability visible, actionable, and repeatable.</h1>
             <p class="lead">
-              Practical SRE essays, incident reviews, and runbooks for teams running modern
-              platforms at scale.
+              Practical SRE essays, incident reviews, event coverage, and runbooks for teams
+              running modern platforms at scale.
             </p>
 
             <div class="hero-actions">
@@ -94,77 +95,217 @@
       </section>
 
       <section class="section section-alt" id="news">
-        <div class="container">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Latest news</p>
-              <h2>What’s changing in SRE right now</h2>
-            </div>
-            <p class="section-copy">
-              Recent releases and research shaping how teams run, observe, and automate reliability.
-            </p>
-          </div>
+       <div class="container">
+         <div class="section-heading">
+           <div>
+             <p class="eyebrow">Current news</p>
+             <h2>What’s happening in SRE right now</h2>
+           </div>
+           <p class="section-copy">
+             Fresh releases, product launches, and reliability signals worth watching this week.
+           </p>
+         </div>
 
-          <div class="news-grid">
-            <article class="post-card news-card">
-              <img class="post-thumb post-thumb-image" src="news-azure-sre-agent.svg" alt="" />
-              <div class="post-body">
-                <div class="meta-row">
-                  <span class="pill">AI operations</span>
-                  <span>Mar 10, 2026</span>
-                </div>
-                <h3>Azure SRE Agent reaches general availability</h3>
-                <p>
-                  Microsoft moved Azure SRE Agent into GA, framing it as an AI teammate for triage,
-                  remediation, and incident workflows.
-                </p>
-                <a href="https://learn.microsoft.com/en-us/azure/sre-agent/" target="_blank" rel="noreferrer">
-                  Read the announcement
-                </a>
-              </div>
-            </article>
+         <div class="news-grid">
+           <article class="post-card news-card">
+             <img class="post-thumb post-thumb-image" src="news-otel.svg" alt="" />
+             <div class="post-body">
+               <div class="meta-row">
+                 <span class="pill">Observability</span>
+                 <span>June 2026</span>
+               </div>
+               <h3>OpenTelemetry keeps pushing the SRE stack forward</h3>
+               <p>
+                 OTel keeps showing up everywhere teams need portable traces, metrics, and logs
+                 that can travel across tools.
+               </p>
+               <a
+                 href="https://www.cncf.io/announcements/2026/05/21/cloud-native-computing-foundation-announces-opentelemetrys-graduation-solidifying-status-as-the-de-facto-observability-standard/"
+                 target="_blank"
+                 rel="noreferrer"
+               >
+                 Read source
+               </a>
+             </div>
+           </article>
 
-            <article class="post-card news-card">
-              <img class="post-thumb post-thumb-image" src="news-grafana-13.svg" alt="" />
-              <div class="post-body">
-                <div class="meta-row">
-                  <span class="pill">Observability</span>
-                  <span>Apr 21, 2026</span>
-                </div>
-                <h3>Grafana 13 adds easier open observability at scale</h3>
-                <p>
-                  Grafana Labs shipped Grafana 13 with better OpenTelemetry paths, dynamic
-                  dashboards, and a redesigned Loki architecture.
-                </p>
-                <a
-                  href="https://grafana.com/blog/grafana-13-release-all-the-latest-features/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  See what changed
-                </a>
-              </div>
-            </article>
+           <article class="post-card news-card">
+             <img class="post-thumb post-thumb-image" src="news-oss-india.svg" alt="" />
+             <div class="post-body">
+               <div class="meta-row">
+                 <span class="pill">Community</span>
+                 <span>June 2026</span>
+               </div>
+               <h3>Open Source Summit India puts reliability in the spotlight</h3>
+               <p>
+                 The cloud-native track is leaning hard into platform engineering, observability,
+                 and the on-call problems SREs keep solving.
+               </p>
+               <a href="https://events.linuxfoundation.org/open-source-summit-india/" target="_blank" rel="noreferrer">
+                 Read source
+               </a>
+             </div>
+           </article>
 
-            <article class="post-card news-card">
-              <img class="post-thumb post-thumb-image" src="news-sre-report.svg" alt="" />
-              <div class="post-body">
-                <div class="meta-row">
-                  <span class="pill">Reliability research</span>
-                  <span>2026 report</span>
-                </div>
-                <h3>AI is cutting toil, but reliability gaps remain</h3>
-                <p>
-                  LogicMonitor’s SRE Report 2026 says AI is reducing repetitive work, while many
-                  teams still struggle to connect reliability work to business outcomes.
-                </p>
-                <a href="https://www.logicmonitor.com/resources/sre-report-2026" target="_blank" rel="noreferrer">
-                  Read the report
-                </a>
-              </div>
-            </article>
-          </div>
-        </div>
+           <article class="post-card news-card">
+             <img class="post-thumb post-thumb-image" src="news-linux.svg" alt="" />
+             <div class="post-body">
+               <div class="meta-row">
+                 <span class="pill">Infrastructure</span>
+                 <span>June 2026</span>
+               </div>
+               <h3>Linux still powers the reliability layer underneath everything</h3>
+               <p>
+                 Kernel, distro, and ecosystem work continue to shape the systems SRE teams trust
+                 for scale, performance, and control.
+               </p>
+               <a
+                 href="https://events.linuxfoundation.org/open-source-summit-india/"
+                 target="_blank"
+                 rel="noreferrer"
+               >
+                 Read source
+               </a>
+             </div>
+           </article>
+
+           <article class="post-card news-card">
+             <img class="post-thumb post-thumb-image" src="news-azure-sre-agent.svg" alt="" />
+             <div class="post-body">
+               <div class="meta-row">
+                 <span class="pill">AI operations</span>
+                 <span>March 2026</span>
+               </div>
+               <h3>Azure SRE Agent goes GA for incident response</h3>
+               <p>
+                 Microsoft’s Azure SRE Agent is now generally available, aimed at speeding up
+                 diagnosis, triage, and response in Azure environments.
+               </p>
+               <a href="https://learn.microsoft.com/en-us/azure/sre-agent/" target="_blank" rel="noreferrer">
+                 Read source
+               </a>
+             </div>
+           </article>
+
+           <article class="post-card news-card">
+             <img class="post-thumb post-thumb-image" src="news-grafana-13.svg" alt="" />
+             <div class="post-body">
+               <div class="meta-row">
+                 <span class="pill">Observability</span>
+                 <span>April 2026</span>
+               </div>
+               <h3>Grafana 13 makes open observability easier to run</h3>
+               <p>
+                 Grafana 13 adds deeper OpenTelemetry integration, dynamic dashboards, and a more
+                 capable Loki architecture.
+               </p>
+               <a
+                 href="https://grafana.com/press/2026/04/21/grafana-labs-launches-grafana-13-at-grafanacon-2026-makes-open-observability-easier-to-run-at-scale/"
+                 target="_blank"
+                 rel="noreferrer"
+               >
+                 Read source
+               </a>
+             </div>
+           </article>
+
+           <article class="post-card news-card">
+             <img class="post-thumb post-thumb-image" src="news-sre-report.svg" alt="" />
+             <div class="post-body">
+               <div class="meta-row">
+                 <span class="pill">Reliability research</span>
+                 <span>2026 report</span>
+               </div>
+               <h3>The SRE Report says AI helps, but toil still matters</h3>
+               <p>
+                 LogicMonitor’s 2026 report says AI is cutting repetitive work, while teams still
+                 struggle to connect reliability work to business outcomes.
+               </p>
+               <a href="https://www.logicmonitor.com/resources/sre-report-2026" target="_blank" rel="noreferrer">
+                 Read source
+               </a>
+             </div>
+           </article>
+         </div>
+       </div>
+      </section>
+
+      <section class="section" id="archive">
+       <div class="container">
+         <div class="section-heading">
+           <div>
+             <p class="eyebrow">Archive</p>
+             <h2>Older news and releases</h2>
+           </div>
+           <p class="section-copy">
+             Past headlines stay here so the homepage can focus on what is current.
+           </p>
+         </div>
+
+         <div class="news-grid">
+           <article class="post-card news-card">
+             <img class="post-thumb post-thumb-image" src="news-azure-sre-agent.svg" alt="" />
+             <div class="post-body">
+               <div class="meta-row">
+                 <span class="pill">AI operations</span>
+                 <span>Mar 10, 2026</span>
+               </div>
+               <h3>Azure SRE Agent reaches general availability</h3>
+               <p>
+                 Microsoft moved Azure SRE Agent into GA, framing it as an AI teammate for triage,
+                 remediation, and incident workflows.
+               </p>
+               <a href="https://learn.microsoft.com/en-us/azure/sre-agent/" target="_blank" rel="noreferrer">
+                 Read the announcement
+               </a>
+             </div>
+           </article>
+
+           <article class="post-card news-card">
+             <img class="post-thumb post-thumb-image" src="news-grafana-13.svg" alt="" />
+             <div class="post-body">
+               <div class="meta-row">
+                 <span class="pill">Observability</span>
+                 <span>Apr 21, 2026</span>
+               </div>
+               <h3>Grafana 13 adds easier open observability at scale</h3>
+               <p>
+                 Grafana Labs shipped Grafana 13 with better OpenTelemetry paths, dynamic
+                 dashboards, and a redesigned Loki architecture.
+               </p>
+               <a
+                 href="https://grafana.com/blog/grafana-13-release-all-the-latest-features/"
+                 target="_blank"
+                 rel="noreferrer"
+               >
+                 See what changed
+               </a>
+             </div>
+           </article>
+
+           <article class="post-card news-card">
+             <img class="post-thumb post-thumb-image" src="news-sre-report.svg" alt="" />
+             <div class="post-body">
+               <div class="meta-row">
+                 <span class="pill">Reliability research</span>
+                 <span>2026 report</span>
+               </div>
+               <h3>AI is cutting toil, but reliability gaps remain</h3>
+               <p>
+                 LogicMonitor’s SRE Report 2026 says AI is reducing repetitive work, while many
+                 teams still struggle to connect reliability work to business outcomes.
+               </p>
+               <a
+                 href="https://www.logicmonitor.com/resources/sre-report-2026"
+                 target="_blank"
+                 rel="noreferrer"
+               >
+                 Read the report
+               </a>
+             </div>
+           </article>
+         </div>
+       </div>
       </section>
 
       <section class="section" id="insights">
