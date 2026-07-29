@@ -1,666 +1,180 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>everythingsre — Reliability stories, playbooks, and tools</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="An SRE-focused site for reliability engineering, incident response, observability, and platform operations."
+      content="Current SRE news, reliability engineering field notes, operating practices, and tools."
     />
+    <title>everythingsre — Reliability engineering field notes</title>
     <link rel="icon" href="logo.png" type="image/png" />
-    <link rel="stylesheet" href="styles.css" />
-    <script>
-    (function(h,o,u,n,d) {
-    h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
-    d=o.createElement(u);d.async=1;d.src=n
-    n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
-  })(window,document,'script','https://www.datadoghq-browser-agent.com/us5/v6/datadog-rum.js','DD_RUM')
-
-    window.DD_RUM.onReady(function() {
-        window.DD_RUM && window.DD_RUM.init({
-    applicationId: '750dff52-45a9-4fd0-882f-ab425c716828',
-    clientToken: 'pub09d68a358c94cfc0065de4abdb450430',
-    site: 'us5.datadoghq.com',
-    service: 'everythingsre',
-    env: 'production',
-    version: '1.0.0',
-    sessionSampleRate: 100,
-    sessionReplaySampleRate: 20,
-    trackUserInteractions: true,
-    trackResources: true,
-    trackLongTasks: true,
-});
-
-    });
-</script>
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="home.css" />
   </head>
   <body>
-    <div class="bg-glow bg-glow-1"></div>
-    <div class="bg-glow bg-glow-2"></div>
-
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="#home" aria-label="everythingsre home">
-          <img class="brand-mark" src="logo.png" alt="" aria-hidden="true" />
-        </a>
-
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span class="sr-only">Toggle navigation</span>
-        </button>
-
-        <nav class="primary-nav" id="primary-nav">
-          <a href="#insights">Insights</a>
-          <a href="#events">Events</a>
-          <a href="#news">News</a>
-          <a href="#archive">Archive</a>
-          <a href="#toolkit">Toolkit</a>
-          <a href="#playbooks">Playbooks</a>
-          <a href="#about">About</a>
-          <a class="nav-cta" href="#subscribe">Subscribe</a>
-        </nav>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="wordmark" href="#main-content">everything<span>sre</span></a>
+      <div class="nav-links">
+        <a href="#briefing">Briefing</a>
+        <a href="#practice">Practice</a>
+        <a href="#toolkit">Toolkit</a>
       </div>
-    </header>
+      <a class="nav-button" href="#subscribe">Get the field note</a>
+    </nav>
 
-    <main id="home">
+    <main id="main-content">
       <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">SRE field notes</p>
-            <h1>Make reliability visible, actionable, and repeatable.</h1>
-            <p class="lead">
-              Practical SRE essays, incident reviews, event coverage, and runbooks for teams
-              running modern platforms at scale.
-            </p>
-
-            <div class="hero-actions">
-              <a class="button button-primary" href="#insights">Explore insights</a>
-              <a class="button button-secondary" href="#events">Latest events</a>
-            </div>
-
-            <ul class="hero-metrics" aria-label="Site highlights">
-              <li>
-                <strong>24</strong>
-                <span>runbooks and templates</span>
-              </li>
-              <li>
-                <strong>18%</strong>
-                <span>faster incident triage</span>
-              </li>
-              <li>
-                <strong>7</strong>
-                <span>tool categories covered</span>
-              </li>
-            </ul>
-          </div>
-
-          <aside class="hero-panel" aria-label="Featured story">
-            <p class="panel-label">Featured story</p>
-            <div class="story-card story-card-large">
-              <img class="story-visual story-thumb-image" src="feature-observability.svg" alt="" />
-              <div class="story-content">
-                <div class="meta-row">
-                  <span class="pill">Observability</span>
-                  <span>12 min read</span>
-                </div>
-                <h2>Tracing the gap between “green” dashboards and real user pain</h2>
-                <p>
-                  How to connect service indicators, traces, and SLOs so the page tells the truth
-                  before the pager does.
-                </p>
-                <a href="#insights">Read the feature</a>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <section class="section" id="events">
-       <div class="container">
-         <div class="section-heading">
-           <div>
-             <p class="eyebrow">Events</p>
-             <h2>SREDAY Hyderabad wrapped up with a lot of learning</h2>
-           </div>
-           <p class="section-copy">
-             The SREDAY event has ended in Hyderabad, and these session recordings keep the best
-             takeaways ready to revisit.
-           </p>
-         </div>
-
-         <div class="news-grid">
-           <article class="post-card news-card">
-             <img class="post-thumb post-thumb-image" src="logo.png" alt="SREDAY Hyderabad event" />
-             <div class="post-body">
-               <div class="meta-row">
-                 <span class="pill">SREDAY</span>
-                 <span>Hyderabad</span>
-               </div>
-               <h3>The event ended with plenty of learning</h3>
-               <p>
-                 SREDAY Hyderabad has wrapped up, and the conversations, demos, and talks left a
-                 strong set of ideas for the community.
-               </p>
-             </div>
-           </article>
-
-           <article class="post-card news-card">
-             <img
-               class="post-thumb post-thumb-image"
-               src="https://img.youtube.com/vi/KKkR8nUFmB8/hqdefault.jpg"
-               alt="YouTube session thumbnail 1"
-             />
-             <div class="post-body">
-               <div class="meta-row">
-                 <span class="pill">Session 1</span>
-                 <span>YouTube</span>
-               </div>
-               <h3>SREDAY session recording one</h3>
-               <p>Watch the first session from the Hyderabad event.</p>
-               <a href="https://www.youtube.com/watch?v=KKkR8nUFmB8" target="_blank" rel="noreferrer">
-                 Watch video
-               </a>
-             </div>
-           </article>
-
-           <article class="post-card news-card">
-             <img
-               class="post-thumb post-thumb-image"
-               src="https://img.youtube.com/vi/zSh724rsLjA/hqdefault.jpg"
-               alt="YouTube session thumbnail 2"
-             />
-             <div class="post-body">
-               <div class="meta-row">
-                 <span class="pill">Session 2</span>
-                 <span>YouTube</span>
-               </div>
-               <h3>SREDAY session recording two</h3>
-               <p>Revisit the second session from the event.</p>
-               <a href="https://www.youtube.com/live/zSh724rsLjA?si=1PLY5Fno8rlBkaGq" target="_blank" rel="noreferrer">
-                 Watch video
-               </a>
-             </div>
-           </article>
-
-           <article class="post-card news-card">
-             <img
-               class="post-thumb post-thumb-image"
-               src="https://img.youtube.com/vi/GZymWbft_rA/hqdefault.jpg"
-               alt="YouTube session thumbnail 3"
-             />
-             <div class="post-body">
-               <div class="meta-row">
-                 <span class="pill">Session 3</span>
-                 <span>YouTube</span>
-               </div>
-               <h3>SREDAY session recording three</h3>
-               <p>Catch the third session from SREDAY Hyderabad.</p>
-               <a href="https://www.youtube.com/live/GZymWbft_rA?si=lPBq5CFp6Is4YdlW" target="_blank" rel="noreferrer">
-                 Watch video
-               </a>
-             </div>
-           </article>
-         </div>
-       </div>
-      </section>
-
-      <section class="section section-alt" id="news">
-       <div class="container">
-         <div class="section-heading">
-           <div>
-             <p class="eyebrow">Current news</p>
-             <h2>What’s happening in SRE right now</h2>
-           </div>
-           <p class="section-copy">
-             Fresh releases, product launches, and reliability signals worth watching this week.
-           </p>
-         </div>
-
-         <div class="news-grid">
-           <article class="post-card news-card">
-             <img class="post-thumb post-thumb-image" src="news-sre-report.svg" alt="SRE news" />
-             <div class="post-body">
-               <div class="meta-row">
-                 <span class="pill">SRE</span>
-                 <span>Jul 23, 2026</span>
-               </div>
-               <h3>Latest SRE headlines — Jul 23, 2026</h3>
-               <p>
-                 OpenTelemetry, Grafana 13, LogicMonitor SRE report, Azure SRE Agent GA, and OSS India coverage.
-               </p>
-               <a href="news/2026-07-23-latest-news.html">Read more</a>
-             </div>
-           </article>
-           <article class="post-card news-card">
-             <img class="post-thumb post-thumb-image" src="news-otel.svg" alt="" />
-             <div class="post-body">
-               <div class="meta-row">
-                 <span class="pill">Observability</span>
-                 <span>June 2026</span>
-               </div>
-               <h3>OpenTelemetry keeps pushing the SRE stack forward</h3>
-               <p>
-                 OTel keeps showing up everywhere teams need portable traces, metrics, and logs
-                 that can travel across tools.
-               </p>
-               <a
-                 href="https://www.cncf.io/announcements/2026/05/21/cloud-native-computing-foundation-announces-opentelemetrys-graduation-solidifying-status-as-the-de-facto-observability-standard/"
-                 target="_blank"
-                 rel="noreferrer"
-               >
-                 Read source
-               </a>
-             </div>
-           </article>
-
-           <article class="post-card news-card">
-             <img class="post-thumb post-thumb-image" src="news-oss-india.svg" alt="" />
-             <div class="post-body">
-               <div class="meta-row">
-                 <span class="pill">Community</span>
-                 <span>June 2026</span>
-               </div>
-               <h3>Open Source Summit India puts reliability in the spotlight</h3>
-               <p>
-                 The cloud-native track is leaning hard into platform engineering, observability,
-                 and the on-call problems SREs keep solving.
-               </p>
-               <a href="https://events.linuxfoundation.org/open-source-summit-india/" target="_blank" rel="noreferrer">
-                 Read source
-               </a>
-             </div>
-           </article>
-
-           <article class="post-card news-card">
-             <img class="post-thumb post-thumb-image" src="news-linux.svg" alt="" />
-             <div class="post-body">
-               <div class="meta-row">
-                 <span class="pill">Infrastructure</span>
-                 <span>June 2026</span>
-               </div>
-               <h3>Linux still powers the reliability layer underneath everything</h3>
-               <p>
-                 Kernel, distro, and ecosystem work continue to shape the systems SRE teams trust
-                 for scale, performance, and control.
-               </p>
-               <a
-                 href="https://events.linuxfoundation.org/open-source-summit-india/"
-                 target="_blank"
-                 rel="noreferrer"
-               >
-                 Read source
-               </a>
-             </div>
-           </article>
-
-           <article class="post-card news-card">
-             <img class="post-thumb post-thumb-image" src="news-azure-sre-agent.svg" alt="" />
-             <div class="post-body">
-               <div class="meta-row">
-                 <span class="pill">AI operations</span>
-                 <span>March 2026</span>
-               </div>
-               <h3>Azure SRE Agent goes GA for incident response</h3>
-               <p>
-                 Microsoft’s Azure SRE Agent is now generally available, aimed at speeding up
-                 diagnosis, triage, and response in Azure environments.
-               </p>
-               <a href="https://learn.microsoft.com/en-us/azure/sre-agent/" target="_blank" rel="noreferrer">
-                 Read source
-               </a>
-             </div>
-           </article>
-
-           <article class="post-card news-card">
-             <img class="post-thumb post-thumb-image" src="news-grafana-13.svg" alt="" />
-             <div class="post-body">
-               <div class="meta-row">
-                 <span class="pill">Observability</span>
-                 <span>April 2026</span>
-               </div>
-               <h3>Grafana 13 makes open observability easier to run</h3>
-               <p>
-                 Grafana 13 adds deeper OpenTelemetry integration, dynamic dashboards, and a more
-                 capable Loki architecture.
-               </p>
-               <a
-                 href="https://grafana.com/press/2026/04/21/grafana-labs-launches-grafana-13-at-grafanacon-2026-makes-open-observability-easier-to-run-at-scale/"
-                 target="_blank"
-                 rel="noreferrer"
-               >
-                 Read source
-               </a>
-             </div>
-           </article>
-
-           <article class="post-card news-card">
-             <img class="post-thumb post-thumb-image" src="news-sre-report.svg" alt="" />
-             <div class="post-body">
-               <div class="meta-row">
-                 <span class="pill">Reliability research</span>
-                 <span>2026 report</span>
-               </div>
-               <h3>The SRE Report says AI helps, but toil still matters</h3>
-               <p>
-                 LogicMonitor’s 2026 report says AI is cutting repetitive work, while teams still
-                 struggle to connect reliability work to business outcomes.
-               </p>
-               <a href="https://www.logicmonitor.com/resources/sre-report-2026" target="_blank" rel="noreferrer">
-                 Read source
-               </a>
-             </div>
-           </article>
-         </div>
-       </div>
-      </section>
-
-      <section class="section" id="archive">
-       <div class="container">
-         <div class="section-heading">
-           <div>
-             <p class="eyebrow">Archive</p>
-             <h2>Older news and releases</h2>
-           </div>
-           <p class="section-copy">
-             Past headlines stay here so the homepage can focus on what is current.
-           </p>
-         </div>
-
-         <div class="news-grid">
-           <article class="post-card news-card">
-             <img class="post-thumb post-thumb-image" src="news-azure-sre-agent.svg" alt="" />
-             <div class="post-body">
-               <div class="meta-row">
-                 <span class="pill">AI operations</span>
-                 <span>Mar 10, 2026</span>
-               </div>
-               <h3>Azure SRE Agent reaches general availability</h3>
-               <p>
-                 Microsoft moved Azure SRE Agent into GA, framing it as an AI teammate for triage,
-                 remediation, and incident workflows.
-               </p>
-               <a href="https://learn.microsoft.com/en-us/azure/sre-agent/" target="_blank" rel="noreferrer">
-                 Read the announcement
-               </a>
-             </div>
-           </article>
-
-           <article class="post-card news-card">
-             <img class="post-thumb post-thumb-image" src="news-grafana-13.svg" alt="" />
-             <div class="post-body">
-               <div class="meta-row">
-                 <span class="pill">Observability</span>
-                 <span>Apr 21, 2026</span>
-               </div>
-               <h3>Grafana 13 adds easier open observability at scale</h3>
-               <p>
-                 Grafana Labs shipped Grafana 13 with better OpenTelemetry paths, dynamic
-                 dashboards, and a redesigned Loki architecture.
-               </p>
-               <a
-                 href="https://grafana.com/blog/grafana-13-release-all-the-latest-features/"
-                 target="_blank"
-                 rel="noreferrer"
-               >
-                 See what changed
-               </a>
-             </div>
-           </article>
-
-           <article class="post-card news-card">
-             <img class="post-thumb post-thumb-image" src="news-sre-report.svg" alt="" />
-             <div class="post-body">
-               <div class="meta-row">
-                 <span class="pill">Reliability research</span>
-                 <span>2026 report</span>
-               </div>
-               <h3>AI is cutting toil, but reliability gaps remain</h3>
-               <p>
-                 LogicMonitor’s SRE Report 2026 says AI is reducing repetitive work, while many
-                 teams still struggle to connect reliability work to business outcomes.
-               </p>
-               <a
-                 href="https://www.logicmonitor.com/resources/sre-report-2026"
-                 target="_blank"
-                 rel="noreferrer"
-               >
-                 Read the report
-               </a>
-             </div>
-           </article>
-         </div>
-       </div>
-      </section>
-
-      <section class="section" id="insights">
-        <div class="container">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Latest insights</p>
-              <h2>New posts for reliability-minded teams</h2>
-            </div>
-            <div class="filter-bar" role="tablist" aria-label="Post filters">
-              <button class="filter is-active" type="button" data-filter="all">All</button>
-              <button class="filter" type="button" data-filter="observability">Observability</button>
-              <button class="filter" type="button" data-filter="incident-response">
-                Incident response
-              </button>
-              <button class="filter" type="button" data-filter="kubernetes">Kubernetes</button>
-              <button class="filter" type="button" data-filter="automation">Automation</button>
-            </div>
-          </div>
-
-          <div class="posts-grid">
-            <article class="post-card" data-categories="observability">
-              <img class="post-thumb post-thumb-image" src="insight-dashboard.svg" alt="" />
-              <div class="post-body">
-                <div class="meta-row">
-                  <span class="pill">Observability</span>
-                  <span>Jan 12, 2026</span>
-                </div>
-                <h3>Designing dashboards that survive an outage</h3>
-                <p>
-                  A practical pattern for separating signal from noise when everyone is opening the
-                  same graph under pressure.
-                </p>
-              </div>
-            </article>
-
-            <article class="post-card" data-categories="incident-response automation">
-              <img class="post-thumb post-thumb-image" src="insight-alerts.svg" alt="" />
-              <div class="post-body">
-                <div class="meta-row">
-                  <span class="pill">Incident response</span>
-                  <span>Dec 28, 2025</span>
-                </div>
-                <h3>From alert to action: automating the first five minutes</h3>
-                <p>
-                  Reduce manual handoffs with enriched alerts, context links, and safe triage
-                  automation.
-                </p>
-              </div>
-            </article>
-
-            <article class="post-card" data-categories="kubernetes observability">
-              <img class="post-thumb post-thumb-image" src="insight-kubernetes.svg" alt="" />
-              <div class="post-body">
-                <div class="meta-row">
-                  <span class="pill">Kubernetes</span>
-                  <span>Dec 10, 2025</span>
-                </div>
-                <h3>Guardrails for noisy clusters without blocking delivery</h3>
-                <p>
-                  Apply policy, quotas, and progressive delivery to keep cluster behavior
-                  predictable as teams scale.
-                </p>
-              </div>
-            </article>
-
-            <article class="post-card" data-categories="automation">
-              <img class="post-thumb post-thumb-image" src="insight-runbooks.svg" alt="" />
-              <div class="post-body">
-                <div class="meta-row">
-                  <span class="pill">Automation</span>
-                  <span>Nov 22, 2025</span>
-                </div>
-                <h3>Writing runbooks that can actually be executed at 3 a.m.</h3>
-                <p>
-                  Keep the steps short, deterministic, and linked to the tools engineers already
-                  use under stress.
-                </p>
-              </div>
-            </article>
-
-            <article class="post-card" data-categories="observability incident-response">
-              <img class="post-thumb post-thumb-image" src="insight-slo.svg" alt="" />
-              <div class="post-body">
-                <div class="meta-row">
-                  <span class="pill">SLOs</span>
-                  <span>Nov 02, 2025</span>
-                </div>
-                <h3>Choosing the right SLI when every metric looks important</h3>
-                <p>
-                  Start from user journeys, then build the smallest possible set of signals that
-                  can explain a breach.
-                </p>
-              </div>
-            </article>
-
-            <article class="post-card" data-categories="kubernetes automation">
-              <img class="post-thumb post-thumb-image" src="insight-rollout.svg" alt="" />
-              <div class="post-body">
-                <div class="meta-row">
-                  <span class="pill">Delivery</span>
-                  <span>Oct 19, 2025</span>
-                </div>
-                <h3>Safer deployments with progressive rollout checks</h3>
-                <p>
-                  Use health gates, canaries, and rollback criteria to make change risk visible
-                  before users feel it.
-                </p>
-              </div>
-            </article>
+        <div class="hero-main">
+          <p class="kicker">The reliability engineering field note</p>
+          <h1>Systems fail.<br /><em>Good teams learn.</em></h1>
+          <p class="dek">
+            Clear reporting on the tools, operating patterns, and hard-won lessons shaping modern
+            reliability engineering.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#briefing">Read today’s briefing</a>
+            <span>Updated 29 July 2026 · Bengaluru</span>
           </div>
         </div>
+        <aside class="signal-card">
+          <div class="signal-top">
+            <span>Signal / 01</span>
+            <span class="live-dot">Fresh</span>
+          </div>
+          <a class="signal-project" href="https://opentelemetry.io/" target="_blank" rel="noreferrer">
+            <img src="assets/brands/opentelemetry-icon-color.svg" alt="OpenTelemetry project" />
+            <span>OpenTelemetry</span>
+          </a>
+          <img src="news-otel.svg" alt="" />
+          <p class="tag">Observability</p>
+          <h2>OpenTelemetry’s demo finally looks like the systems we operate</h2>
+          <p>
+            Version 3.0 adds agentic AI, continuous profiling, mixed instrumentation, and
+            end-to-end telemetry tests.
+          </p>
+          <a href="https://opentelemetry.io/blog/2026/we-broke-the-demo/" target="_blank" rel="noreferrer">
+            Read the project announcement →
+          </a>
+        </aside>
       </section>
 
-      <section class="section section-alt" id="toolkit">
-        <div class="container">
-          <div class="section-heading compact">
-            <div>
-              <p class="eyebrow">Toolkit</p>
-              <h2>Common SRE building blocks</h2>
-            </div>
-            <p class="section-copy">
-              A focused stack for telemetry, delivery, and reliability automation.
-            </p>
-          </div>
-
-          <div class="tool-grid">
-            <div class="tool-card">
-              <h3>Prometheus</h3>
-              <p>Metrics scraping, alert rules, and SLO-friendly signal collection.</p>
-            </div>
-            <div class="tool-card">
-              <h3>Grafana</h3>
-              <p>Readable dashboards, alert views, and operational storytelling.</p>
-            </div>
-            <div class="tool-card">
-              <h3>OpenTelemetry</h3>
-              <p>Distributed traces and portable instrumentation across services.</p>
-            </div>
-            <div class="tool-card">
-              <h3>Terraform</h3>
-              <p>Reusable infrastructure code for environments, policies, and guardrails.</p>
-            </div>
-            <div class="tool-card">
-              <h3>Argo CD</h3>
-              <p>Git-driven delivery with safer rollout control and drift visibility.</p>
-            </div>
-            <div class="tool-card">
-              <h3>Loki</h3>
-              <p>Searchable logs that pair well with traces and service metrics.</p>
-            </div>
-          </div>
-        </div>
+      <section class="ticker" aria-label="Current coverage">
+        <span>Now tracking</span>
+        <p>OTel Demo 3.0</p><i></i>
+        <p>ECS Action Logs</p><i></i>
+        <p>etcd 3.7</p><i></i>
+        <p>Agentic operations</p>
       </section>
 
-      <section class="section" id="playbooks">
-        <div class="container">
-          <div class="section-heading compact">
-            <div>
-              <p class="eyebrow">Playbooks</p>
-              <h2>Reliability loops that teams can repeat</h2>
-            </div>
-          </div>
-
-          <div class="playbook-grid">
-            <div class="playbook">
-              <span>01</span>
-              <h3>Measure the right thing</h3>
-              <p>Define user-focused SLIs before adding more dashboards or alerts.</p>
-            </div>
-            <div class="playbook">
-              <span>02</span>
-              <h3>Alert with context</h3>
-              <p>Route alerts with the next best action, owner, and linked investigation steps.</p>
-            </div>
-            <div class="playbook">
-              <span>03</span>
-              <h3>Run incidents consistently</h3>
-              <p>Keep roles, timelines, and comms predictable while the system is unstable.</p>
-            </div>
-            <div class="playbook">
-              <span>04</span>
-              <h3>Learn and harden</h3>
-              <p>Turn each incident into concrete fixes, not just notes in a retrospective doc.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-cta" id="subscribe">
-        <div class="container cta-card">
+      <section class="briefing" id="briefing">
+        <header class="section-title">
           <div>
-            <p class="eyebrow">Newsletter</p>
-            <h2>Get the latest SRE news by email.</h2>
-            <p>Sign up to receive new reliability updates as they’re published.</p>
+            <p class="kicker">Current briefing</p>
+            <h2>What changed,<br />and why it matters</h2>
           </div>
+          <p>
+            A concise scan of primary-source releases for practitioners responsible for uptime,
+            latency, and the systems behind them.
+          </p>
+        </header>
 
-          <form class="subscribe-form">
-            <label class="sr-only" for="email">Email address</label>
-            <input id="email" name="email" type="email" placeholder="you@company.com" required />
-            <button class="button button-primary" type="submit">Subscribe</button>
-            <p class="form-status" aria-live="polite"></p>
-          </form>
+        <div class="story-list">
+          <article>
+            <p class="story-index">02</p>
+            <div>
+              <p class="tag">Deployments · 21 Jul</p>
+              <h3>Amazon ECS opens the control-plane black box</h3>
+              <p>
+                Timestamped Action Logs expose service-side deployment operations and give
+                responders a cleaner path from rollback to root cause.
+              </p>
+            </div>
+            <a href="https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ecs-action-logs/" target="_blank" rel="noreferrer" aria-label="Read the AWS Action Logs announcement">↗</a>
+          </article>
+          <article>
+            <p class="story-index">03</p>
+            <div>
+              <div class="story-project">
+                <p class="tag">Kubernetes · 14 Jul</p>
+                <a href="https://kubernetes.io/" target="_blank" rel="noreferrer">
+                  <img src="assets/brands/kubernetes-icon-color.svg" alt="Kubernetes project" />
+                </a>
+              </div>
+              <h3>Scaling signals move beyond CPU and memory</h3>
+              <p>
+                A new Kubernetes guide turns workload signals such as queue depth into custom
+                metrics for autoscaling.
+              </p>
+            </div>
+            <a href="https://kubernetes.io/blog/2026/07/14/custom-metrics-exporter-kubernetes/" target="_blank" rel="noreferrer" aria-label="Read the Kubernetes custom metrics guide">↗</a>
+          </article>
+          <article>
+            <p class="story-index">04</p>
+            <div>
+              <p class="tag">Infrastructure · 8 Jul</p>
+              <h3>etcd 3.7 strengthens Kubernetes’ state core</h3>
+              <p>
+                SIG etcd’s latest minor release adds RangeStream to the distributed store beneath
+                Kubernetes control planes.
+              </p>
+            </div>
+            <a href="https://kubernetes.io/blog/2026/07/08/announcing-etcd-3.7/" target="_blank" rel="noreferrer" aria-label="Read the etcd 3.7 announcement">↗</a>
+          </article>
+          <article>
+            <p class="story-index">05</p>
+            <div>
+              <p class="tag">AI operations · 29 May</p>
+              <h3>Google maps agents across the SRE lifecycle</h3>
+              <p>
+                The practical focus is bounded assistance: readiness reviews, playbooks, anomaly
+                detection, investigation, and mitigation with human control.
+              </p>
+            </div>
+            <a href="https://cloud.google.com/blog/products/devops-sre/how-google-sre-is-using-agentic-ai-to-improve-operations/" target="_blank" rel="noreferrer" aria-label="Read Google's AI in SRE article">↗</a>
+          </article>
         </div>
+        <a class="roundup-link" href="news/2026-07-29-latest-news.html">
+          Read the complete July 29 source notes →
+        </a>
       </section>
 
-      <section class="section section-alt" id="about">
-        <div class="container about-grid">
-          <div>
-            <p class="eyebrow">About</p>
-            <h2>Built for SREs, platform engineers, and on-call teams.</h2>
-          </div>
-          <p class="section-copy">
-            everythingsre is a clean, opinionated home for reliability content. It is designed to
-            feel editorial like the reference site, but the voice, topics, and tools are centered
-            on SRE practice rather than generic DevOps.
+      <section class="practice" id="practice">
+        <div class="practice-copy">
+          <p class="kicker">The practice</p>
+          <h2>Reliability is a loop,<br />not a launch gate.</h2>
+          <p>
+            Measure the user journey. Ship with guardrails. Respond with context. Turn the
+            incident into a safer system.
           </p>
         </div>
+        <ol>
+          <li><span>01</span><strong>Define</strong><small>User-centred SLIs and explicit budgets</small></li>
+          <li><span>02</span><strong>Observe</strong><small>Signals that explain, not just alert</small></li>
+          <li><span>03</span><strong>Respond</strong><small>Clear ownership and executable context</small></li>
+          <li><span>04</span><strong>Learn</strong><small>Durable fixes with named follow-through</small></li>
+        </ol>
+      </section>
+
+      <section class="toolkit" id="toolkit">
+        <p class="kicker">Operator’s shelf</p>
+        <div class="tool-row">
+          <span>Prometheus</span><span>OpenTelemetry</span><span>Grafana</span>
+          <span>Kubernetes</span><span>Terraform</span><span>Argo CD</span>
+        </div>
+      </section>
+
+      <section class="subscribe" id="subscribe">
+        <p class="kicker">Stay close to the signal</p>
+        <h2>One sharp reliability note.<br />No incident-channel noise.</h2>
+        <a href="mailto:hello@everythingsre.dev">hello@everythingsre.dev →</a>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <span>everythingsre</span>
-        <span>Reliability engineering for modern teams</span>
-        <span id="year"></span>
-      </div>
+    <footer>
+      <a class="wordmark" href="#main-content">everything<span>sre</span></a>
+      <p>Independent field notes for people who keep systems useful.</p>
+      <p>© 2026</p>
     </footer>
   </body>
 </html>
