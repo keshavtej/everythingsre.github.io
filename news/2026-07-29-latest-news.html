@@ -8,111 +8,179 @@
       content="A concise, source-linked briefing on SRE and reliability engineering news for July 29, 2026."
     />
     <title>SRE headlines — Jul 29, 2026</title>
-    <link rel="icon" href="/logo.png" type="image/png" />
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="../logo.png" type="image/png" />
+    <link rel="stylesheet" href="../home.css?v=2.0.1" />
+    <link rel="stylesheet" href="../news.css?v=2.0.0" />
   </head>
   <body>
-    <main class="container news-brief">
-      <a class="back-link" href="/#news">← Back to everythingsre</a>
-      <p class="eyebrow">Field briefing · July 29, 2026</p>
-      <h1>Reliability work is moving closer to the change</h1>
-      <p class="lead">
-        This month’s practical thread is context: richer reference systems, visible deployment
-        actions, workload-aware scaling, and carefully bounded AI assistance.
-      </p>
+    <a class="skip-link" href="#article">Skip to article</a>
 
-      <section>
-        <div class="brief-label">
-          <p class="brief-number">01 · Observability</p>
-          <a class="project-logo-link" href="https://opentelemetry.io/" target="_blank" rel="noreferrer">
-            <img src="/assets/brands/opentelemetry-icon-color.svg" alt="OpenTelemetry project" />
-            <span>Official project</span>
-          </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="wordmark" href="../index.html">everything<span>sre</span></a>
+      <div class="nav-links">
+        <a href="../index.html#briefing">Briefing</a>
+        <a href="../index.html#practice">Practice</a>
+        <a href="../index.html#toolkit">Toolkit</a>
+      </div>
+      <a class="nav-button" href="../index.html#subscribe">Get the field note</a>
+    </nav>
+
+    <main id="article">
+      <header class="article-hero">
+        <a class="back-link" href="../index.html#briefing">← Back to the briefing</a>
+        <div class="article-heading">
+          <div>
+            <p class="kicker">Field briefing · 29 July 2026</p>
+            <h1>Reliability work is moving closer to the change.</h1>
+          </div>
+          <div class="article-intro">
+            <p>
+              This month’s practical thread is context: richer reference systems, visible
+              deployment actions, workload-aware scaling, and carefully bounded AI assistance.
+            </p>
+            <dl class="article-meta">
+              <div>
+                <dt>Edition</dt>
+                <dd>05 signals</dd>
+              </div>
+              <div>
+                <dt>Reading time</dt>
+                <dd>6 minutes</dd>
+              </div>
+              <div>
+                <dt>Sources</dt>
+                <dd>Project &amp; vendor</dd>
+              </div>
+            </dl>
+          </div>
         </div>
-        <h2>OpenTelemetry Demo 3.0 models messier, real systems</h2>
-        <p>
-          Released July 28, the new demo adds agentic AI services, continuous profiling, mixed
-          Prometheus and OpenTelemetry instrumentation, SQL query correlation, and an end-to-end
-          test suite for traces, metrics, and logs. For SRE teams, it is a more credible sandbox
-          for testing pipelines and failure modes before production.
-        </p>
-        <a href="https://opentelemetry.io/blog/2026/we-broke-the-demo/" target="_blank" rel="noreferrer">
-          OpenTelemetry project announcement
-        </a>
-      </section>
+      </header>
 
-      <section>
-        <p class="brief-number">02 · Deployments</p>
-        <h2>AWS is making ECS control-plane actions inspectable</h2>
-        <p>
-          ECS Action Logs, announced July 21, expose timestamped service-side operations during
-          deployments and Managed Daemon updates. Logs can flow to CloudWatch Logs, S3, or
-          Firehose; Amazon Q uses them to diagnose rollbacks and unstable revisions. Earlier in
-          July, the ECS console also gained a live deployment timeline and health view.
-        </p>
-        <p class="source-row">
-          <a href="https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ecs-action-logs/" target="_blank" rel="noreferrer">AWS Action Logs announcement</a>
-          <span aria-hidden="true">·</span>
-          <a href="https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ecs-aws-management-console/" target="_blank" rel="noreferrer">AWS deployment observability announcement</a>
-        </p>
-      </section>
+      <div class="article-ticker" aria-label="Coverage themes">
+        <span>In this briefing</span>
+        <p>Observability</p><i></i>
+        <p>Deployments</p><i></i>
+        <p>Kubernetes</p><i></i>
+        <p>Service signals</p><i></i>
+        <p>AI operations</p>
+      </div>
 
-      <section>
-        <div class="brief-label">
-          <p class="brief-number">03 · Kubernetes</p>
-          <a class="project-logo-link" href="https://kubernetes.io/" target="_blank" rel="noreferrer">
-            <img src="/assets/brands/kubernetes-icon-color.svg" alt="Kubernetes project" />
-            <span>Official project</span>
-          </a>
-        </div>
-        <h2>Autoscaling signals and cluster state both get attention</h2>
-        <p>
-          Kubernetes’ July 14 guide demonstrates a custom metrics exporter for signals such as
-          queue depth—useful when CPU and memory do not describe demand. On July 8, SIG etcd
-          announced etcd 3.7, including the long-requested RangeStream feature. Together they
-          highlight both ends of reliable orchestration: better workload decisions and a stronger
-          state-store foundation.
-        </p>
-        <p class="source-row">
-          <a href="https://kubernetes.io/blog/2026/07/14/custom-metrics-exporter-kubernetes/" target="_blank" rel="noreferrer">Kubernetes custom metrics guide</a>
-          <span aria-hidden="true">·</span>
-          <a href="https://kubernetes.io/blog/2026/07/08/announcing-etcd-3.7/" target="_blank" rel="noreferrer">Kubernetes etcd 3.7 announcement</a>
-        </p>
-      </section>
+      <article class="article-body">
+        <section class="brief-story">
+          <p class="story-number">01</p>
+          <div class="story-copy">
+            <div class="story-label">
+              <p class="tag">Observability · 28 Jul</p>
+              <a class="project-mark" href="https://opentelemetry.io/" target="_blank" rel="noreferrer">
+                <img src="../assets/brands/opentelemetry-icon-color.svg" alt="OpenTelemetry project" />
+                <span>Official project</span>
+              </a>
+            </div>
+            <h2>OpenTelemetry Demo 3.0 models messier, real systems</h2>
+            <p>
+              Released July 28, the new demo adds agentic AI services, continuous profiling, mixed
+              Prometheus and OpenTelemetry instrumentation, SQL query correlation, and an
+              end-to-end test suite for traces, metrics, and logs. For SRE teams, it is a more
+              credible sandbox for testing pipelines and failure modes before production.
+            </p>
+            <a class="source-link" href="https://opentelemetry.io/blog/2026/we-broke-the-demo/" target="_blank" rel="noreferrer">
+              OpenTelemetry project announcement ↗
+            </a>
+          </div>
+        </section>
 
-      <section>
-        <p class="brief-number">04 · Service signals</p>
-        <h2>CloudWatch links deployments to errors and latency</h2>
-        <p>
-          Application Signals Service Events automatically captures exception and latency
-          snapshots plus deployment events for instrumented services. The useful operational
-          shift is correlation: responders can ask whether a fresh change introduced a new
-          symptom without first assembling the timeline by hand.
-        </p>
-        <a href="https://aws.amazon.com/about-aws/whats-new/2026/06/cloudwatch-service-events/" target="_blank" rel="noreferrer">
-          AWS Service Events announcement
-        </a>
-      </section>
+        <section class="brief-story">
+          <p class="story-number">02</p>
+          <div class="story-copy">
+            <p class="tag">Deployments · 21 Jul</p>
+            <h2>AWS is making ECS control-plane actions inspectable</h2>
+            <p>
+              ECS Action Logs expose timestamped service-side operations during deployments and
+              Managed Daemon updates. Logs can flow to CloudWatch Logs, S3, or Firehose; Amazon Q
+              uses them to diagnose rollbacks and unstable revisions. Earlier in July, the ECS
+              console also gained a live deployment timeline and health view.
+            </p>
+            <div class="source-list">
+              <a class="source-link" href="https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ecs-action-logs/" target="_blank" rel="noreferrer">AWS Action Logs announcement ↗</a>
+              <a class="source-link" href="https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ecs-aws-management-console/" target="_blank" rel="noreferrer">AWS deployment observability announcement ↗</a>
+            </div>
+          </div>
+        </section>
 
-      <section>
-        <p class="brief-number">05 · AI operations</p>
-        <h2>Google frames agents as a controlled SRE force multiplier</h2>
-        <p>
-          Google SRE describes agentic work across reliability design, production readiness,
-          playbook maintenance, anomaly detection, investigation, and mitigation. Its stated
-          boundary matters: higher-risk services and actions keep human review and control. The
-          signal is broader than automated root-cause analysis; teams are testing agents across
-          the full service lifecycle.
-        </p>
-        <a href="https://cloud.google.com/blog/products/devops-sre/how-google-sre-is-using-agentic-ai-to-improve-operations/" target="_blank" rel="noreferrer">
-          Google Cloud SRE article
-        </a>
-      </section>
+        <section class="brief-story">
+          <p class="story-number">03</p>
+          <div class="story-copy">
+            <div class="story-label">
+              <p class="tag">Kubernetes · 14 Jul</p>
+              <a class="project-mark" href="https://kubernetes.io/" target="_blank" rel="noreferrer">
+                <img src="../assets/brands/kubernetes-icon-color.svg" alt="Kubernetes project" />
+                <span>Official project</span>
+              </a>
+            </div>
+            <h2>Autoscaling signals and cluster state both get attention</h2>
+            <p>
+              Kubernetes’ July 14 guide demonstrates a custom metrics exporter for signals such
+              as queue depth—useful when CPU and memory do not describe demand. On July 8, SIG
+              etcd announced etcd 3.7, including the long-requested RangeStream feature. Together
+              they highlight both ends of reliable orchestration: better workload decisions and a
+              stronger state-store foundation.
+            </p>
+            <div class="source-list">
+              <a class="source-link" href="https://kubernetes.io/blog/2026/07/14/custom-metrics-exporter-kubernetes/" target="_blank" rel="noreferrer">Kubernetes custom metrics guide ↗</a>
+              <a class="source-link" href="https://kubernetes.io/blog/2026/07/08/announcing-etcd-3.7/" target="_blank" rel="noreferrer">Kubernetes etcd 3.7 announcement ↗</a>
+            </div>
+          </div>
+        </section>
 
-      <p class="brief-note">
-        Editorial cutoff: July 29, 2026. Dates and technical claims above were checked against the
-        linked project or vendor sources.
-      </p>
+        <section class="brief-story">
+          <p class="story-number">04</p>
+          <div class="story-copy">
+            <p class="tag">Service signals · 6 Jul</p>
+            <h2>CloudWatch links deployments to errors and latency</h2>
+            <p>
+              Application Signals Service Events automatically captures exception and latency
+              snapshots plus deployment events for instrumented services. The useful operational
+              shift is correlation: responders can ask whether a fresh change introduced a new
+              symptom without first assembling the timeline by hand.
+            </p>
+            <a class="source-link" href="https://aws.amazon.com/about-aws/whats-new/2026/06/cloudwatch-service-events/" target="_blank" rel="noreferrer">
+              AWS Service Events announcement ↗
+            </a>
+          </div>
+        </section>
+
+        <section class="brief-story">
+          <p class="story-number">05</p>
+          <div class="story-copy">
+            <p class="tag">AI operations · 29 May</p>
+            <h2>Google frames agents as a controlled SRE force multiplier</h2>
+            <p>
+              Google SRE describes agentic work across reliability design, production readiness,
+              playbook maintenance, anomaly detection, investigation, and mitigation. Its stated
+              boundary matters: higher-risk services and actions keep human review and control.
+              The signal is broader than automated root-cause analysis; teams are testing agents
+              across the full service lifecycle.
+            </p>
+            <a class="source-link" href="https://cloud.google.com/blog/products/devops-sre/how-google-sre-is-using-agentic-ai-to-improve-operations/" target="_blank" rel="noreferrer">
+              Google Cloud SRE article ↗
+            </a>
+          </div>
+        </section>
+
+        <aside class="editorial-note">
+          <p class="kicker">Editorial note</p>
+          <p>
+            Cutoff: July 29, 2026. Dates and technical claims were checked against the linked
+            project or vendor sources.
+          </p>
+        </aside>
+      </article>
     </main>
+
+    <footer>
+      <a class="wordmark" href="../index.html">everything<span>sre</span></a>
+      <p>Independent field notes for people who keep systems useful.</p>
+      <p>© 2026</p>
+    </footer>
   </body>
 </html>
