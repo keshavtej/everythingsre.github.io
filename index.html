@@ -10,6 +10,38 @@
     <title>everythingsre — Reliability engineering field notes</title>
     <link rel="icon" href="logo.png" type="image/png" />
     <link rel="stylesheet" href="home.css" />
+    <script>
+      (function (h, o, u, n, d) {
+        h = h[d] = h[d] || { q: [], onReady: function (callback) { h.q.push(callback); } };
+        d = o.createElement(u);
+        d.async = true;
+        d.src = n;
+        n = o.getElementsByTagName(u)[0];
+        n.parentNode.insertBefore(d, n);
+      })(
+        window,
+        document,
+        'script',
+        'https://www.datadoghq-browser-agent.com/us5/v6/datadog-rum.js',
+        'DD_RUM'
+      );
+
+      window.DD_RUM.onReady(function () {
+        window.DD_RUM.init({
+          applicationId: '750dff52-45a9-4fd0-882f-ab425c716828',
+          clientToken: 'pub09d68a358c94cfc0065de4abdb450430',
+          site: 'us5.datadoghq.com',
+          service: 'everythingsre',
+          env: 'production',
+          version: '2.0.0',
+          sessionSampleRate: 100,
+          sessionReplaySampleRate: 20,
+          trackUserInteractions: true,
+          trackResources: true,
+          trackLongTasks: true,
+        });
+      });
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
