@@ -162,16 +162,56 @@ h1, h2, h3, p { margin-top: 0; }
 .toolkit { padding: 90px clamp(24px, 5vw, 76px); }
 .tool-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 .tool-row span { padding: 12px 18px; border: 1px solid var(--ink); border-radius: 99px; font: 500 12px ui-monospace, "SFMono-Regular", Consolas, monospace; }
-.subscribe { padding: 100px clamp(24px, 5vw, 76px); background: var(--acid); }
+.subscribe {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: clamp(48px, 8vw, 120px);
+  align-items: end;
+  padding: 100px clamp(24px, 5vw, 76px);
+  background: var(--acid);
+}
 .subscribe .kicker { color: var(--ink); }
 .subscribe h2 { max-width: 900px; }
-.subscribe > a { display: inline-block; margin-top: 40px; padding-bottom: 5px; border-bottom: 2px solid; font: 500 14px ui-monospace, "SFMono-Regular", Consolas, monospace; }
+.subscribe-form label {
+  display: block;
+  margin-bottom: 10px;
+  font: 500 11px ui-monospace, "SFMono-Regular", Consolas, monospace;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.subscribe-fields { display: flex; }
+.subscribe-fields input {
+  min-width: 0;
+  flex: 1;
+  padding: 15px 16px;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font: inherit;
+}
+.subscribe-fields button {
+  padding: 15px 20px;
+  border: 1px solid var(--ink);
+  color: white;
+  background: var(--ink);
+  cursor: pointer;
+  font: 500 11px ui-monospace, "SFMono-Regular", Consolas, monospace;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.subscribe-fields input:focus-visible,
+.subscribe-fields button:focus-visible {
+  outline: 3px solid var(--signal);
+  outline-offset: 3px;
+}
+.form-status { min-height: 1.5em; margin: 12px 0 0; font-size: 13px; }
 footer { display: grid; grid-template-columns: 1fr 1fr auto; gap: 30px; align-items: end; padding: 55px clamp(24px, 5vw, 76px); color: #b2b7ae; background: var(--ink); font-size: 12px; }
 footer p { margin: 0; }
 
 @media (max-width: 900px) {
   .nav-links { display: none; }
-  .hero, .section-title, .practice { grid-template-columns: 1fr; }
+  .hero, .section-title, .practice, .subscribe { grid-template-columns: 1fr; }
   .hero { padding-top: 80px; }
   .signal-card { max-width: 520px; }
 }
@@ -190,5 +230,7 @@ footer p { margin: 0; }
   .practice { gap: 48px; padding-block: 82px; }
   .practice li { grid-template-columns: 35px 1fr; }
   .practice li small { grid-column: 2; }
+  .subscribe-fields { flex-direction: column; gap: 10px; }
+  .subscribe-fields button { width: 100%; }
   footer { grid-template-columns: 1fr; }
 }

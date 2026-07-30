@@ -197,9 +197,25 @@
       </section>
 
       <section class="subscribe" id="subscribe">
-        <p class="kicker">Stay close to the signal</p>
-        <h2>One sharp reliability note.<br />No incident-channel noise.</h2>
-        <a href="mailto:hello@everythingsre.dev">hello@everythingsre.dev →</a>
+        <div>
+          <p class="kicker">Stay close to the signal</p>
+          <h2>One sharp reliability note.<br />No incident-channel noise.</h2>
+        </div>
+        <form class="subscribe-form">
+          <label for="subscriber-email">Email address</label>
+          <div class="subscribe-fields">
+            <input
+              id="subscriber-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="you@company.com"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </div>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
       </section>
     </main>
 
@@ -208,5 +224,16 @@
       <p>Independent field notes for people who keep systems useful.</p>
       <p>© 2026</p>
     </footer>
+    <script>
+      const subscribeForm = document.querySelector('.subscribe-form');
+      const formStatus = document.querySelector('.form-status');
+
+      subscribeForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const email = new FormData(subscribeForm).get('email');
+        formStatus.textContent = `Thanks — ${email} is subscribed for the latest news updates.`;
+        subscribeForm.reset();
+      });
+    </script>
   </body>
 </html>
